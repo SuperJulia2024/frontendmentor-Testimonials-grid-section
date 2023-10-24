@@ -1,0 +1,258 @@
+$moderate-violet: hsl(263, 55%, 52%);
+$moderate-violet-50: hsla(263, 77%, 75%, 0.5);
+$moderate-violet-70: hsla(263, 77%, 75%, 70%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-grayish-blue-50: hsla(217, 19%, 35%, 50%);
+$very-dark-grayish-blue-70: hsla(213, 11%, 15%, 70%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(0, 0%, 81%);
+$light-gray-50: hsla(0, 0%, 81%, 50%);
+$light-gray-70: hsla(0, 0%, 81%, 70%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+$light-grayish-blue-50: hsla(210, 46%, 95%, 50%);
+$light-grayish-blue-70: hsla(210, 46%, 95%, 70%);
+
+$default-font-size: 13px;
+$default-family-font: "Barlow Semi Condensed", sans-serif;
+
+@mixin shadow {
+  box-shadow: 5px 5px 15px 5px $light-gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $default-family-font;
+  font-size: $default-font-size;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-grayish-blue;
+}
+
+main {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 80px 0;
+}
+
+article {
+  border-radius: 12px;
+  padding: 24px 32px 30px 32px;
+
+  .author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    .title {
+      margin-left: 15px;
+
+      .name {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .subtitle {
+      }
+    }
+  }
+
+  & > h1 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+}
+
+article#daniel {
+  background-color: $moderate-violet;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 30px;
+
+  position: relative;
+
+  .author {
+    img {
+      border: 3px solid $moderate-violet-50;
+    }
+
+    .title {
+      .name {
+        color: $light-grayish-blue;
+      }
+      .subtitle {
+        color: $moderate-violet-50;
+      }
+    }
+  }
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    color: $moderate-violet-70;
+  }
+}
+
+article#jonathan {
+  background-color: $very-dark-grayish-blue;
+
+  .author {
+    img {
+      border: 3px solid $light-gray-50;
+    }
+
+    .name {
+      color: $light-gray;
+    }
+    .title {
+      color: $light-gray-50;
+    }
+  }
+
+  h1 {
+    color: $white;
+  }
+
+  p {
+    color: $light-gray-70;
+  }
+}
+
+article#jeanette {
+  background-color: $white;
+  @include shadow;
+
+  .author {
+    .name {
+      color: $very-dark-grayish-blue;
+    }
+    .title {
+      color: $very-dark-grayish-blue-50;
+    }
+  }
+
+  h1 {
+    color: $very-dark-grayish-blue;
+  }
+
+  p {
+    color: $very-dark-grayish-blue-70;
+  }
+}
+
+article#patrick {
+  background-color: $very-dark-blackish-blue;
+  @include shadow;
+
+  .author {
+    img {
+      border: 3px solid $moderate-violet;
+    }
+
+    .name {
+      color: $light-grayish-blue;
+    }
+    .title {
+      color: $light-grayish-blue-50;
+    }
+  }
+
+  h1 {
+    color: $white;
+  }
+
+  p {
+    color: $light-grayish-blue-70;
+  }
+}
+
+article#kira {
+  background-color: $white;
+  @include shadow;
+
+  .author {
+    .name {
+      color: $very-dark-grayish-blue;
+    }
+    .title {
+      color: $very-dark-grayish-blue-50;
+    }
+  }
+
+  h1 {
+    color: $very-dark-grayish-blue;
+  }
+
+  p {
+    color: $very-dark-grayish-blue-70;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    height: 100vh;
+  }
+
+  main {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 30px;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      "art-daniel  art-daniel  art-jonathan  art-kira"
+      "art-jeanette  art-patrick art-patrick art-kira";
+  }
+
+  article#daniel {
+    background-position: top 0 right 87px;
+    grid-area: art-daniel;
+  }
+
+  article#jonathan {
+    grid-area: art-jonathan;
+  }
+
+  article#jeanette {
+    grid-area: art-jeanette;
+  }
+
+  article#patrick {
+    grid-area: art-patrick;
+  }
+
+  article#kira {
+    grid-area: art-kira;
+  }
+}
