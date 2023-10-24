@@ -1,6 +1,6 @@
 # Frontend Mentor - Testimonials grid section solution
 
-This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -24,12 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/SuperJulia2024/frontendmentor-Testimonials-grid-section](https://github.com/SuperJulia2024/frontendmentor-Testimonials-grid-section)
+- Live Site URL: [https://superjulia2024.github.io/frontendmentor-Testimonials-grid-section](https://superjulia2024.github.io/frontendmentor-Testimonials-grid-section)
 
 ## My process
 
