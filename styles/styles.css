@@ -163,7 +163,7 @@ article#kira p {
     width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50% 47%;
+    grid-template-rows: auto;
     gap: 30px 30px;
     justify-items: stretch;
     align-items: stretch;
